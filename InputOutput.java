@@ -34,14 +34,15 @@ public class InputOutput {
         double toAverage = 0;
         int count = 0;
         
-        //Keeps reading in as long as you provide input (ctr+z on Windows to stop input)
-        while (!StdIn.isEmpty()) {
+        //Read in several values
+        StdOut.println("Input 5 numbers");
+        for (int i = 0; i < 5; i++) {
             double value = StdIn.readDouble();
             toAverage += value;
             count++;
         }
 
-        double average = toAverage / count;
+        double average = computeAverage(toAverage, count);
         StdOut.println("Average is " + average);
         
         
@@ -61,6 +62,10 @@ public class InputOutput {
         
         //Play a sound
         StdAudio.play("secret.wav");
+    }
+    
+    public static double computeAverage(double toAverage, int count) {
+        return (toAverage / count);
     }
     
 }
