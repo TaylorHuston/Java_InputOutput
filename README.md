@@ -1,4 +1,4 @@
-Sts Input and Output
+Std Input and Output
 ===============
 
 Basic Java Input and Ouput
